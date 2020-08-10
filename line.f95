@@ -9,6 +9,18 @@ Program quadrant
     print *, "l=",l
     a= (atan(y/x))*180/pi
     print *, "angle=",a
+    if (x>=0 .and. y>=0) then 
+    q = '1'
+    else if (x<=0 .and. y>=0) then
+    q = '2'
+    else if (x<=0 .and. y<=0) then
+    q = '3'
+    else 
+    q = '4'
+    end if
+    
+    print *, "the point lies in the quadrant" ,q
+    
 End Program quadrant
 
 
